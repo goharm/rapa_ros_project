@@ -1,18 +1,46 @@
 개발은 각 단위별 모듈로 개발한다.
 
 + 개발 예정 모듈은 다음과 같다.
+    + 검출부
+        - ros 에서 음성 실시간 검출 -> ros_sound.py
+        - ros 에서 명령권자 얼굴 검출 -> ros_detecting_face.py
+        - ros 에서 명령권자 몸 검출-> ros_detecting_body.py
+        - ros 에서 가위바위보 검출 -> ros_detecting_hand.py
+    
     + 구동부
+        - 구동부 공통 -> motor_control.py
         - 선회 -> turning.py
         - 전진 -> comming.py
         - 도리도리 -> nonono.py
         - 지그재그 후진 -> zigzag_back_off.py
+    
     + 딥러닝
-        - "이리와" -> gamestart.py
-        - "안놀아" -> gameover.py
+        - "이리와" 음성인식 -> gamestart.py
+        - "안놀아" 음성인식 -> gameover.py
         - 안면인식 -> whois.py
         - 가위바위보 게임 -> game.py
+    
     + 머신러닝(cv)
         - 동제권자와 로봇간의 거리 -> space_check.py
 
 각 모듈별 개발 내용은
 메인 프로그램에서 호출하여 활용한다.
+
+개발 순서와 예상 소요시간은 다음과 같다.
+1. ros_sound.py // 5h
+2. ros_detecting_face.py // 5h
+3. ros_detecting_hand.py // 2h
+4. ros_detecting_body.py // 2h
+5. space_check.py // 5h
+6. motor_control.py // 10h
+7. turning.py // 2h
+8. comming.py // 2h
+9. nonono.py // 2h
+10. zigzag_back_off.py // 2h
+11. whois.py // 5h
+12. game.py // 3h
+13. gamestart.py // 3h
+14. gameover.py // 3h
+15. main.py // 3h
+
+총 54시간 (6일 소요예정)
