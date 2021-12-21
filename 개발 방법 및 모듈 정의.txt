@@ -27,7 +27,7 @@
 메인 프로그램에서 호출하여 활용한다.
 
 개발 순서와 예상 소요시간은 다음과 같다.
-1. ros_sound.py // 5h
+1. ros_sound.py // 5h -- usb mic 장치 확보
 2. ros_detecting_face.py // 5h
 3. ros_detecting_hand.py // 2h
 4. ros_detecting_body.py // 2h
