@@ -1,26 +1,26 @@
 개발은 각 단위별 모듈로 개발한다.
 
 + 개발 예정 모듈은 다음과 같다.
-    + 검출부
+    + 검출부(/detection)
         - ros 에서 음성 실시간 검출 -> ros_sound.py
         - ros 에서 명령권자 얼굴 검출 -> ros_detecting_face.py
         - ros 에서 명령권자 몸 검출-> ros_detecting_body.py
         - ros 에서 가위바위보 검출 -> ros_detecting_hand.py
     
-    + 구동부
+    + 구동부(/control)
         - 구동부 공통 -> motor_control.py
         - 선회 -> turning.py
         - 전진 -> comming.py
         - 도리도리 -> nonono.py
         - 지그재그 후진 -> zigzag_back_off.py
     
-    + 딥러닝
+    + 딥러닝(/deeplearning)
         - "이리와" 음성인식 -> gamestart.py
         - "안놀아" 음성인식 -> gameover.py
         - 안면인식 -> whois.py
         - 가위바위보 게임 -> game.py
     
-    + 머신러닝(cv)
+    + 머신러닝(/machinelearning)
         - 동제권자와 로봇간의 거리 -> space_check.py
 
 각 모듈별 개발 내용은
