@@ -1,24 +1,30 @@
-##########################################################
-# 마이크를 파이오디오로 활성화를 시켜서 소리 넘파이로 포집하는 코드    #
-import pyaudio
-import numpy as np
- 
-CHUNK = 2**10
-RATE = 44100
- 
-p=pyaudio.PyAudio()
-# stream=p.open(format=pyaudio.paInt16,channels=1,rate=RATE,input=True,frames_per_buffer=CHUNK,input_device_index=2)
-# 위에 코드의 디바이스 코드가 해당 pc에 적합하지 않아서 디바이스 부분을 제거함)
+# #구글API 활용
+# #!pip install SpeechRecognition
 
-stream=p.open(format=pyaudio.paInt16,channels=1,rate=RATE,input=True,frames_per_buffer=CHUNK)
+import speech_recognition as sr
+
+# microphone에서 auido source를 생성합니다
+r = sr.Recognizer()
+with sr.Microphone() as source:
+    print("터틀봇에게 이야기를 해주세요~")
+    audio = r.listen(source)
+
+# 구글 웹 음성 API로 인식하기 (하루에 제한 50회)
+try:
+    print("Google Speech Recognition thinks you said : " + r.recognize_google(audio, language='ko'))
+
+    if r.recognize_google(audio, language='ko') == "출발":
+        pass
+    elif r.recognize_google(audio, language='ko') == "정지":
+        pass
+    elif r.recognize_google(audio, language='ko') == "준비":
+        pass
+    else :
+        pass # 시계 방향 선회
+
+except sr.UnknownValueError:
+    print("터틀봇이 알아듣지 못했습니다.")
+except sr.RequestError as e:
+    print("알 수 없는 문제가 발생했습니다.; {0}".format(e))
 
 
-while(True):
-    data = np.fromstring(stream.read(CHUNK),dtype=np.int16)
-    print(int(np.average(np.abs(data))))
- 
-stream.stop_stream()
-stream.close()
-p.terminate()
-#                                                        #
-##########################################################
