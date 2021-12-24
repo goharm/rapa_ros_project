@@ -7,5 +7,4 @@
 # new environment variables
 
 # modified environment variables
-export LD_LIBRARY_PATH='/home/ubuntu/Develops/ros1/rolling_ws/devel/lib:/opt/ros/noetic/lib'
 export PWD='/home/ubuntu/Develops/rapa_ros_project/catkin_ws/build'
