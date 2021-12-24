@@ -1,0 +1,2 @@
+- setup-file:
+    local-name: /home/ubuntu/Develops/rapa_ros_project/catkin_ws/install/setup.sh
