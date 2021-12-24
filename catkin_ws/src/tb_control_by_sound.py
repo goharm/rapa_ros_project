@@ -39,7 +39,7 @@ CTRL-C to quit
 """
 
 e = """
-Communications Failed
+터틀봇이 준비가 안된 것 같아요~
 """
 
 
