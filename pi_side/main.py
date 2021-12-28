@@ -1,4 +1,4 @@
-import listener as ls
+from listener import listener as ls
 
 def func_01():
     pass
@@ -8,7 +8,7 @@ def func_01():
 
 if __name__ == '__main__':
     try:
-        ls.listener()
+        ls()
 
     except Exception as e: 
         print(e)
