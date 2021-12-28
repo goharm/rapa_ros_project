@@ -1,3 +1,6 @@
+from control import  control_main as ctrl
+
+
 def func_01():
     pass
     return
@@ -6,7 +9,7 @@ def func_01():
 
 if __name__ == '__main__':
     try:
-        pass
+        ctrl.main()
 
     except Exception as e: 
         pass
